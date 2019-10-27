@@ -1,6 +1,6 @@
-# hci_proj1
+# hci_proj2
 
-HCI Project 1 - SensQVis
+HCI Project 2 - SensQVis2
 
 ## Compile, build and run project
 

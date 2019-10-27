@@ -1,8 +1,8 @@
-import SensQVis from './SensQVis.svelte';
-import "./modules/indexeddb.js"
+import './App.scss';
+import App from './App.svelte';
 
-const app = new SensQVis({
-	target: document.body,
+const app = new App({
+	target: document.body
 });
 
 export default app;
