@@ -65,12 +65,8 @@
       label: "My Studies"
     },
     {
-      icon: "save_alt",
-      label: "Export"
-    },
-    {
-      icon: "build",
-      label: "Preferences"
+      icon: "open_in_browser",
+      label: "Study Import"
     }
   ];
 
@@ -81,11 +77,11 @@
     },
     {
       icon: "save_alt",
-      label: "Descriptives"
+      label: "User view"
     },
     {
       icon: "build",
-      label: "User view"
+      label: "Descriptives"
     },
     {
       icon: "build",
@@ -165,7 +161,7 @@
 <Drawer variant="modal" bind:open={myDrawerOpen}>
   <Content>
     <List>
-      <Subheader>Menu</Subheader>
+      <!-- <Subheader>Menu</Subheader> -->
       {#each menuItems as item}
         <Item
           href="javascript:void(0)"
@@ -183,21 +179,21 @@
         href="javascript:void(0)"
         on:click={() => setActive2('Family')}
         activated={active2 === 'Family'}>
-        <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+        <Graphic class="material-icons" aria-hidden="true">assessment</Graphic>
         <Text>Study 2</Text>
       </Item>
       <Item
         href="javascript:void(0)"
         on:click={() => setActive2('Friends')}
         activated={active2 === 'Friends'}>
-        <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+        <Graphic class="material-icons" aria-hidden="true">assessment</Graphic>
         <Text>Study 1</Text>
       </Item>
       <Item
         href="javascript:void(0)"
         on:click={() => setActive2('Work')}
         activated={active2 === 'Work'}>
-        <Graphic class="material-icons" aria-hidden="true">bookmark</Graphic>
+        <Graphic class="material-icons" aria-hidden="true">assessment</Graphic>
         <Text>Study 3</Text>
       </Item>
     </List>
@@ -236,23 +232,23 @@
             <ActionIcons>
               <IconButton
                 on:click={() => clicked++}
-                toggle
                 aria-label="Add to favorites"
                 title="Add to favorites">
-                <Icon class="material-icons" on>favorite</Icon>
-                <Icon class="material-icons">favorite_border</Icon>
+                <Icon class="material-icons">filter_list</Icon>
               </IconButton>
               <IconButton
+                toggle
                 class="material-icons"
                 on:click={() => clicked++}
                 title="Share">
-                share
+                <Icon class="material-icons" >fullscreen</Icon>
+                <Icon class="material-icons" on>fullscreen_exit</Icon>
               </IconButton>
               <IconButton
                 class="material-icons"
                 on:click={() => clicked++}
                 title="More options">
-                more_vert
+                close
               </IconButton>
             </ActionIcons>
           </Actions>
